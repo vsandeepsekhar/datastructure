@@ -5,6 +5,7 @@ using namespace std;
 int* bubble_sort (int b[10]){
     int i=0;int j=0;int temp =0;
     //a has to be static! Why ?
+    //Because of The functions are stored in the stack memory, Once the function call is finished the memory allocation is removed in which case this function will return NULL to the calle
     static int a[10];
     int N= (sizeof(a)/sizeof(int));
     for(i=0;i<N;i++){
