@@ -18,16 +18,6 @@ void merge_two_sub_arrays(int arr[], int first, int mid, int last){
   n2 = (last - mid); 
   int L[n1];
   int R[n2];
-  //int arr[] = {12,11,13,5,6,7,8};
-//  int arr[7];
-
-//  int L[] = {12,11,13};
-//  int R[] = {5,6,7,8};
-//  
-//
-//  n1 = 3;
-//  n2 = 4;
-
   
   for(i=0;i<n1;i++){
   cout<<"After calling !..Inside loop"<<endl;
@@ -81,24 +71,10 @@ void merge_two_sub_arrays(int arr[], int first, int mid, int last){
 }
 
 int main(){
-//  int i, j, n1, n2, k;
+	
   int arr[] = {12,11,13,8,7,6,5};
   int first, last, mid;
-  //int arr[7];
 
-//  int L[] = {12,11,13};
-//  int R[] = {5,6,7,8};
-  
-
-//  n1 = 3;
-//  n2 = 4;
-//  i=0;
-//  j=0;
-//  k=0;
-//  cout<<"Left Array"<<endl;
-//  display(L, 3);
-//  cout<<"Right Array"<<endl;
-//  display(R, 4);
   first = 0;
   last  = 7;
   mid =0; 
