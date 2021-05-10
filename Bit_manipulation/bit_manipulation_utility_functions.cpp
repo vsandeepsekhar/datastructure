@@ -1,4 +1,5 @@
 #include <iostream>
+#include<bitset>
 
 using namespace std;
 
@@ -12,6 +13,23 @@ void flip_bit(int value, int pos){
     p = r;
     printf("Value of P after Flip: %x\n",p);
 }
+
+void toggle_range(int N, int L, int R){
+  int size = sizeof(int);
+  int P = N;
+  cout<<"Flip Number "<<std::bitset<32>(N)<<"from "<<L<<" to "<<R<<endl;
+  cout<<"Given Number:            "<<std::bitset<32>(N)<<endl;
+  while(L != (R-1)){
+    if(L < R){
+      cout<<"Invalid condition!"<<endl;
+      break;
+    }
+    P = (P ^ (1<<L));
+    L--;
+  }
+  cout<<"Number flipped from"<<L<<" to "<<R<<std::bitset<32>(P)<<endl;
+}
+
 
 int countones(int n){
   int size = sizeof(int);
@@ -52,6 +70,9 @@ int main()
     cout<<"Counting the number of Ones: "<<countones(9);
     //Count number of 1s Faster algorithm
     cout<<"Counting the number of Ones: "<<countones_faster(9);
+    //Toggle Range
+    int number = 21;
+    toggle_range(21,4,1); //10101
 
     return 0;
 }
